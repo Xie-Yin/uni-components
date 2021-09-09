@@ -8,15 +8,15 @@
 export default {
   data() {
     return {
-      iframSrc: "/#/demo/form",
+      iframSrc: "./#/demo/form",
     };
   },
   watch: {
     '$route': {
       immediate: true,
       handler(val) {
-        this.iframSrc = '/#/demo' + val.fullPath
-        console.log('/#/demo' + val.fullPath)
+        this.iframSrc = './#/demo' + val.fullPath
+        console.log('./#/demo' + val.fullPath)
       }
     }
   },

@@ -26,3 +26,4 @@ yarn add @xyfebaby/uni-components
 ```js
 import '@xyfebaby/uni-components/src/styles/index.scss'
 ```
+

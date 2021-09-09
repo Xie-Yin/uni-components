@@ -1,0 +1,28 @@
+name: deploy-docs
+
+on:
+  # 仅main分支docs/目录发生变更时，触发文档部署
+  push:
+    branches:
+      # - main
+      - ci-config
+    paths:
+      - 'docs/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install and Build 🔧 
+        run: |
+          npm install
+          npm run build:docs
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: docs # The branch the action should deploy to.
+          folder: docs/dist # The folder the action should deploy.
