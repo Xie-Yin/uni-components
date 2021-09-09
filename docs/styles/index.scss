@@ -1,0 +1,28 @@
+@import "./markdown.scss";
+@import "./one-light.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.app-container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: unset;
+  color: mix(red, #fff, 60);
+}
+
+pre {
+  max-height: 600px;
+  overflow: auto;
+}
+
