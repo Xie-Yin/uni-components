@@ -4,8 +4,7 @@ on:
   # 仅main分支docs/目录发生变更时，触发文档部署
   push:
     branches:
-      # - main
-      - ci-config
+      - main
     paths:
       - 'docs/**'
 
