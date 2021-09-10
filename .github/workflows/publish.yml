@@ -24,6 +24,7 @@ jobs:
       - name: Get commit message
         run: |
           COMMIT_MESSAGE=$(git log --format=%B -n 1)
+          echo "$COMMIT_MESSAGE"
           echo "commitmsg=${COMMIT_MESSAGE}" >> $GITHUB_ENV
       - name: Show commit message
         run: echo "$commitmsg"
@@ -39,16 +40,15 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: install
-        if: startsWith( env.commitmsg , 'chore(release):' )
-        run: yarn
-      - name: bootstrap
-        if: startsWith( env.commitmsg , 'chore(release):' )
-        run: yarn run bootstrap:lerna
-      - name: build
-        if: startsWith( env.commitmsg , 'chore(release):' )
-        run: yarn build
-      # Define ${CURRENT_VERSION}
+      # - name: install
+      #   if: startsWith( env.commitmsg , 'chore(release):' )
+      #   run: yarn
+      # - name: bootstrap
+      #   if: startsWith( env.commitmsg , 'chore(release):' )
+      #   run: yarn run bootstrap:lerna
+      # - name: build
+      #   if: startsWith( env.commitmsg , 'chore(release):' )
+      #   run: yarn build
       - name: Set Current Version
         if: startsWith( env.commitmsg , 'chore(release):' )
         shell: bash -ex {0}
@@ -98,21 +98,27 @@ jobs:
         run: |
           git add .
           git stash
+      # - name: Publish
+      #   if: steps.tag_check.outputs.exists_tag == 'false' && startsWith( env.commitmsg , 'chore(release):' )
+      #   run: |
+      #     yarn lerna publish from-package --dist-tag 3.0 --yes
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish
         if: steps.tag_check.outputs.exists_tag == 'false' && startsWith( env.commitmsg , 'chore(release):' )
         run: |
-          yarn lerna publish from-package --dist-tag 3.0 --yes
+          yarn publish
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - uses: actions/github-script@0.8.0
-        if: startsWith( env.commitmsg , 'chore(release):' )
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'https://github.com/${{ github.repository }}/releases/tag/v${{ env.CURRENT_VERSION }} is released 🎉'
-            })
+      # - uses: actions/github-script@0.8.0
+      #   if: startsWith( env.commitmsg , 'chore(release):' )
+      #   with:
+      #     github-token: ${{secrets.GITHUB_TOKEN}}
+      #     script: |
+      #       github.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: 'https://github.com/${{ github.repository }}/releases/tag/v${{ env.CURRENT_VERSION }} is released 🎉'
+      #       })
