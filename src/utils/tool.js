@@ -35,5 +35,3 @@ let uuid = 0
 export const gid = () => uuid++
 
 export const globalMap = new Map()
-
-

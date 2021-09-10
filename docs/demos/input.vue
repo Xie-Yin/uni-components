@@ -10,7 +10,7 @@
       <x-input v-model="form.code" placeholder="请输入验证码" prefix="6位数字" suffix="验证码" />
     </x-form-item>
     <x-form-item prop="count">
-      <x-input v-model="form.count" placeholder="请输入金额" suffix="元"/>
+      <x-input v-model="form.count" placeholder="请输入金额" suffix="元" />
     </x-form-item>
   </x-form>
 </template>
@@ -20,12 +20,12 @@ export default {
   data() {
     return {
       form: {
-        name: "",
-        phone: "",
-        code: "",
-        count: "",
+        name: '',
+        phone: '',
+        code: '',
+        count: '',
       },
-    };
+    }
   },
-};
+}
 </script>

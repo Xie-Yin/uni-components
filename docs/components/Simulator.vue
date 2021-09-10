@@ -8,19 +8,19 @@
 export default {
   data() {
     return {
-      iframSrc: "./#/demo/form",
-    };
-  },
-  watch: {
-    '$route': {
-      immediate: true,
-      handler(val) {
-        this.iframSrc = './#/demo' + val.fullPath
-        console.log('./#/demo' + val.fullPath)
-      }
+      iframSrc: './#/demo/form',
     }
   },
-};
+  watch: {
+    $route: {
+      immediate: true,
+      handler(val) {
+        this.iframSrc = `./#/demo${val.fullPath}`
+        console.log(`./#/demo${val.fullPath}`)
+      },
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

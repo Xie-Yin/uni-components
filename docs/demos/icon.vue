@@ -1,6 +1,6 @@
 <template>
   <div class="icon-demo">
-    <div class="icon-demo__item" v-for="icon in icons" :key="icon[0]">
+    <div v-for="icon in icons" :key="icon[0]" class="icon-demo__item">
       <x-icon :name="icon[0]" color="primary" />
       <div class="name">{{ icon[0] }}</div>
     </div>
@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import icons from "../icons";
+import icons from '../icons'
 
 export default {
   data() {
     return {
       icons: Object.entries(icons),
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

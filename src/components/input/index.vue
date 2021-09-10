@@ -46,36 +46,36 @@
 
 <script>
 export default {
-  name: "XInput",
-  inject: ["formItem"],
+  name: 'XInput',
+  inject: ['formItem'],
   props: {
     value: {
       type: [String, Number],
-      default: "",
+      default: '',
     },
     placeholder: {
       type: String,
-      default: "",
+      default: '',
     },
     prefix: {
       type: String,
-      default: "",
+      default: '',
     },
     prefixStyle: {
       type: String,
-      default: "",
+      default: '',
     },
     suffix: {
       type: String,
-      default: "",
+      default: '',
     },
     suffixStyle: {
       type: String,
-      default: "",
+      default: '',
     },
     type: {
       type: String,
-      default: "text",
+      default: 'text',
     },
     maxlength: {
       type: Number,
@@ -83,7 +83,7 @@ export default {
     },
     confirmType: {
       type: String,
-      default: "done",
+      default: 'done',
     },
     trim: Boolean,
     number: Boolean,
@@ -97,54 +97,54 @@ export default {
   },
   methods: {
     transValue(val) {
-      let value = val;
+      let value = val
       if (this.trim) {
-        value = String(value).trim();
+        value = String(value).trim()
       }
       if (this.number) {
-        value = +value;
+        value = +value
       }
-      return value;
+      return value
     },
     onInput(e) {
-      let value = "";
+      let value = ''
       if (this.isWeb) {
-        value = e.target.value;
+        value = e.target.value
       } else {
-        value = e.detail.value;
+        value = e.detail.value
       }
-      this.$emit("input", this.transValue(value));
+      this.$emit('input', this.transValue(value))
       if (this.formItem) {
-        this.formItem.validateField("input");
+        this.formItem.validateField('input')
       }
     },
     onConfirm(e) {
-      this.$emit("confirm", e);
+      this.$emit('confirm', e)
     },
     onFocus(e) {
-      this.$emit("focus", e);
+      this.$emit('focus', e)
     },
     onBlur(e) {
-      this.$emit("blur", e);
+      this.$emit('blur', e)
       if (this.formItem) {
-        this.formItem.validateField("blur");
+        this.formItem.validateField('blur')
       }
     },
     onKeyboardheightchange(e) {
-      this.$emit("keyboardheightchange", e);
+      this.$emit('keyboardheightchange', e)
     },
     onClickSuffix(e) {
       if (!this.disabled) {
-        this.$emit("clickSuffix", e);
+        this.$emit('clickSuffix', e)
       }
     },
     onClickPrefix(e) {
       if (!this.disabled) {
-        this.$emit("clickPrefix", e);
+        this.$emit('clickPrefix', e)
       }
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

@@ -36,35 +36,35 @@ export default {
   data() {
     return {
       form: {
-        name: "",
-        phone: "",
+        name: '',
+        phone: '',
         type: 1,
       },
-    };
+    }
   },
   mounted() {
     this.$refs.form.setRule({
-      name: [{ required: true, message: "请输入用户名", trigger: "blur" }],
-      phone: [{ required: true, message: "请输入手机号", trigger: "blur" }],
+      name: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
+      phone: [{ required: true, message: '请输入手机号', trigger: 'blur' }],
       type: [
         {
           required: true,
-          type: "number",
-          message: "请选择账号类型",
-          trigger: "blur",
+          type: 'number',
+          message: '请选择账号类型',
+          trigger: 'blur',
         },
       ],
-    });
+    })
   },
   methods: {
     onSubmit() {
       this.$refs.form
         .validate()
         .then(() => {})
-        .catch((e) => {
-          console.log(e);
-        });
+        .catch(e => {
+          console.log(e)
+        })
     },
   },
-};
+}
 </script>

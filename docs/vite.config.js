@@ -1,14 +1,14 @@
 // vite.config.js
-const { createVuePlugin } = require('vite-plugin-vue2')
 import Markdown from 'vite-plugin-md'
 import Prism from 'markdown-it-prism'
+const { createVuePlugin } = require('vite-plugin-vue2')
 
 module.exports = {
   root: './docs',
   base: './',
   plugins: [
     createVuePlugin({
-      include: [/\.vue$/, /\.md$/]
+      include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
       wrapperClasses: 'markdown-body',
@@ -16,6 +16,6 @@ module.exports = {
         // https://prismjs.com/
         md.use(Prism)
       },
-    })
+    }),
   ],
 }

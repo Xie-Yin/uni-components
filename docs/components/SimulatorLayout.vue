@@ -7,19 +7,19 @@
 <script>
 export default {
   data() {
-    return {};
+    return {}
   },
   created() {
     const setRem = () => {
-      const sw = Math.min(document.documentElement.clientWidth, 550);
-      document.documentElement.style.fontSize = (37.5 * sw) / 375 + "px";
-    };
+      const sw = Math.min(document.documentElement.clientWidth, 550)
+      document.documentElement.style.fontSize = `${(37.5 * sw) / 375}px`
+    }
 
-    setRem();
+    setRem()
 
-    window.onresize = setRem;
+    window.onresize = setRem
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

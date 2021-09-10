@@ -7,7 +7,7 @@ export const mdRoutes = [
     meta: {
       title: '安装',
     },
-    component: () => import('../md/home.md')
+    component: () => import('../md/home.md'),
   },
   {
     path: 'icon',
@@ -15,7 +15,7 @@ export const mdRoutes = [
     meta: {
       title: 'icon',
     },
-    component: () => import('../md/icon.md')
+    component: () => import('../md/icon.md'),
   },
   {
     path: 'input',
@@ -23,7 +23,7 @@ export const mdRoutes = [
     meta: {
       title: 'input',
     },
-    component: () => import('../md/input.md')
+    component: () => import('../md/input.md'),
   },
   {
     path: 'picker',
@@ -31,7 +31,7 @@ export const mdRoutes = [
     meta: {
       title: 'picker',
     },
-    component: () => import('../md/picker.md')
+    component: () => import('../md/picker.md'),
   },
   {
     path: 'form',
@@ -39,7 +39,7 @@ export const mdRoutes = [
     meta: {
       title: 'form',
     },
-    component: () => import('../md/form.md')
+    component: () => import('../md/form.md'),
   },
 ]
 
@@ -47,17 +47,17 @@ export const demoRoutes = [
   {
     path: 'form',
     name: 'demo-form',
-    component: () => import('../demos/form.vue')
+    component: () => import('../demos/form.vue'),
   },
   {
     path: 'input',
     name: 'demo-input',
-    component: () => import('../demos/input.vue')
+    component: () => import('../demos/input.vue'),
   },
   {
     path: 'picker',
     name: 'demo-picker',
-    component: () => import('../demos/picker.vue')
+    component: () => import('../demos/picker.vue'),
   },
   {
     path: 'icon',
@@ -65,15 +65,15 @@ export const demoRoutes = [
     meta: {
       title: 'icon',
     },
-    component: () => import('../demos/icon.vue')
+    component: () => import('../demos/icon.vue'),
   },
   {
     path: '*',
     name: 'demo-*',
     meta: {
-      title: ''
+      title: '',
     },
-    component: () => import('../demos/home.vue')
+    component: () => import('../demos/home.vue'),
   },
 ]
 
@@ -86,12 +86,12 @@ export const routes = [
   {
     path: '/demo',
     component: () => import('../components/SimulatorLayout.vue'),
-    children: demoRoutes
-  }
+    children: demoRoutes,
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
 })
 
 export default router

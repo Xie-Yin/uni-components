@@ -1,60 +1,60 @@
 <template>
   <div :style="iconStyle" class="x-icon" @click="click">
-    <img class="x-icon__img" v-if="isImg" :src="name" :mode="imgMode" />
+    <img v-if="isImg" class="x-icon__img" :src="name" :mode="imgMode" />
     <span v-else class="x-icon__icon x-iconfont" :class="iconClass" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "XIcon",
+  name: 'XIcon',
   props: {
     name: {
       type: String,
-      default: "",
+      default: '',
     },
     color: {
       type: String,
-      default: "inherit",
+      default: 'inherit',
     },
     size: {
       type: [Number, String],
-      default: "inherit",
+      default: 'inherit',
     },
     imgMode: {
       type: String,
-      default: "aspectFill",
+      default: 'aspectFill',
     },
   },
   computed: {
     isImg() {
-      return /^http[s]*:\/\//.test(this.name);
+      return /^http[s]*:\/\//.test(this.name)
     },
     iconStyle() {
-      let color = "inherit";
+      let color = 'inherit'
       if (
-        !["primary", "success", "error", "waring", "info"].includes(this.color)
+        !['primary', 'success', 'error', 'waring', 'info'].includes(this.color)
       ) {
-        color = this.color;
+        color = this.color
       }
-      return `font-size: ${this.size}; color: ${color};`;
+      return `font-size: ${this.size}; color: ${color};`
     },
     iconClass() {
-      const classs = [this.name];
+      const classs = [this.name]
       if (
-        ["primary", "success", "error", "waring", "info"].includes(this.color)
+        ['primary', 'success', 'error', 'waring', 'info'].includes(this.color)
       ) {
-        classs.push(`--${this.color}`);
+        classs.push(`--${this.color}`)
       }
-      return classs;
+      return classs
     },
   },
   methods: {
     click() {
-      this.$emit("click");
+      this.$emit('click')
     },
   },
-};
+}
 </script>
 
 <style scoped lang="scss">

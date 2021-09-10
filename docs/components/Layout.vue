@@ -9,7 +9,7 @@
           <SideBar />
         </div>
         <div class="layout__content">
-          <router-view></router-view>
+          <router-view />
         </div>
         <div class="layout__simulator">
           <Simulator />
@@ -23,22 +23,22 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
-import SideBar from "./SideBar.vue";
-import Simulator from "./Simulator.vue";
+import Header from './Header.vue'
+// import Footer from './Footer.vue'
+import SideBar from './SideBar.vue'
+import Simulator from './Simulator.vue'
 
 export default {
   components: {
     Header,
     SideBar,
-    Footer,
+    // Footer,
     Simulator,
   },
   data() {
-    return {};
+    return {}
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

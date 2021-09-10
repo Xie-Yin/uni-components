@@ -34,7 +34,7 @@ export default {
         type: 1,
         types: [],
       },
-    };
+    }
   },
-};
+}
 </script>

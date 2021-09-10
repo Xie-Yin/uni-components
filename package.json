@@ -6,7 +6,21 @@
   "scripts": {
     "dev": "vite -c ./docs/vite.config.js --host",
     "build:docs": "vite build -c ./docs/vite.config.js",
-    "serve": "vite serve -c ./docs/vite.config.js"
+    "serve": "vite serve -c ./docs/vite.config.js",
+    "lint-staged": "lint-staged",
+    "lint:fix": "npm run lint -- --fix",
+    "lint": "eslint --ext .vue,.js src/ docs/"
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "keywords": [
     "uni-app"
@@ -16,8 +30,14 @@
     "src/*"
   ],
   "devDependencies": {
+    "@commitlint/config-conventional": "^13.1.0",
+    "@xyfebaby/eslint-config-vue": "^0.1.4",
     "autoprefixer": "^10.3.4",
+    "commitlint": "^13.1.0",
+    "eslint": "^7.14.0",
     "github-markdown-css": "^4.0.0",
+    "husky": "4.3.4",
+    "lint-staged": "^11.1.2",
     "markdown-it-prism": "^2.2.0",
     "postcss-pxtorem": "^6.0.0",
     "postcss-rpxtopx": "^0.1.2",

@@ -5,21 +5,20 @@
       :key="route.path"
       class="side-bar__link"
       :to="{ name: route.name }"
-      >{{ route.meta.title }}</router-link
-    >
+    >{{ route.meta.title }}</router-link>
   </div>
 </template>
 
 <script>
-import { mdRoutes } from "../router";
+import { mdRoutes } from '../router'
 
 export default {
   data() {
     return {
       mdRoutes,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
