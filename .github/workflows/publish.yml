@@ -2,8 +2,7 @@ name: publish
 on:
   push:
     branches:
-      # - main
-      - ci-config
+      - main
   pull_request:
     branches:
       - main
@@ -112,14 +111,14 @@ jobs:
           yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - uses: actions/github-script@0.8.0
-        if: startsWith( env.commitmsg , 'chore(release):' )
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'https://github.com/${{ github.repository }}/releases/tag/v${{ env.CURRENT_VERSION }} is released 🎉'
-            })
+      # - uses: actions/github-script@0.8.0
+      #   if: startsWith( env.commitmsg , 'chore(release):' )
+      #   with:
+      #     github-token: ${{secrets.GITHUB_TOKEN}}
+      #     script: |
+      #       github.issues.createComment({
+      #         issue_number: context.issue.number,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: 'https://github.com/${{ github.repository }}/releases/tag/v${{ env.CURRENT_VERSION }} is released 🎉'
+      #       })
