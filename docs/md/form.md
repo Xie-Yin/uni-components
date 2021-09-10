@@ -77,6 +77,21 @@
 </script>
 ```
 
+### 如何自定义表单项
+
+被`form-item`包裹的组件，会被注入（`provide`选项）formItem 实例，根据不同事件触发`formItem.validateField`，实现自动校验
+
+```js
+export default {
+  inject: ['formItem'],
+  methods: {
+    onChange() {
+      this.formItem.validateField('change')
+    }
+  }
+}
+```
+
 ### Form Props
 
 | prop          | 描述                                        | 类型     | 默认值 | 必须 |
