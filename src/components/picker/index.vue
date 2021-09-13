@@ -75,12 +75,11 @@ export default {
 
 <style lang="scss" scoped>
 .x-picker {
-  display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
   margin-bottom: -32rpx;
 
   &__item {
-    width: 47%;
+    width: 326rpx;
     padding: 0 20rpx;
     box-sizing: border-box;
     height: 88rpx;
@@ -93,6 +92,7 @@ export default {
     margin-bottom: 32rpx;
     overflow: hidden;
     position: relative;
+    float: left;
 
     &.is-selected {
       color: var(--color-g9);
@@ -116,7 +116,7 @@ export default {
     }
 
     &:not(:nth-child(2n)) {
-      margin-right: 3%;
+      margin-right: 18rpx;
     }
 
     &-label {

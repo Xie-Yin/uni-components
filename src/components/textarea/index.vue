@@ -119,7 +119,7 @@ export default {
   box-sizing: border-box;
   background-color: var(--color-g1);
   border-radius: 16rpx;
-  padding: 24rpx 24rpx 48rpx;
+  padding: 24rpx 24rpx 68rpx;
   align-items: center;
   position: relative;
 

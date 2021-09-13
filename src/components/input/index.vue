@@ -92,7 +92,10 @@ export default {
     focus: Boolean,
     autoFocus: Boolean,
     confirmHold: Boolean,
-    adjustPosition: Boolean,
+    adjustPosition: {
+      type: Boolean,
+      default: true,
+    },
     holdKeyboard: Boolean,
   },
   methods: {

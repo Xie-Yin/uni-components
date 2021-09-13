@@ -134,7 +134,6 @@ export default {
     }
 
     &-value {
-      min-width: 100rpx;
       max-width: 500rpx;
     }
   }
