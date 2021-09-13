@@ -90,7 +90,6 @@ export default {
     border-radius: 16rpx;
     background-color: var(--color-g1);
     margin-bottom: 32rpx;
-    overflow: hidden;
     position: relative;
     float: left;
 
@@ -102,12 +101,12 @@ export default {
 
     &-check-tag {
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: -1px;
+      bottom: -1px;
       height: 32rpx;
       width: 32rpx;
       background-color: var(--color-main);
-      border-radius: 16rpx 0 0 0;
+      border-radius: 16rpx 0 16rpx 0;
       color: #fff;
       font-size: 26rpx;
       display: flex;
