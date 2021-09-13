@@ -129,7 +129,7 @@ export default {
     }
 
     &-placeholder {
-      color: var(--color-g9);
+      color: var(--color-g4);
       font-weight: 400;
     }
 
