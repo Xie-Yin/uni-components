@@ -53,7 +53,7 @@ export default {
   }
 
   &__side-bar {
-    width: 140px;
+    min-width: 180px;
     padding: 30px 10px 30px 0;
   }
 

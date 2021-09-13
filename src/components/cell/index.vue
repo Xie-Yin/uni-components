@@ -1,11 +1,11 @@
 <template>
-  <div class="x-cell">
+  <div class="x-cell" @click="$emit('click', $event)">
     <slot name="prefix">
-      <div v-if="prefix" :style="prefixStyle" class="x-cell__prefix" @click="$emit('clickPrefix', $event)">
+      <div v-if="prefix" :style="prefixStyle" class="x-cell__prefix">
         {{ prefix }}
       </div>
     </slot>
-    <div class="x-cell__inner" @click="$emit('click', $event)">
+    <div class="x-cell__inner">
       <slot>
         <div v-if="value.length > 0" class="x-cell__inner-value x-s-text-overflow">
           {{ value[0] }}
@@ -19,7 +19,7 @@
       </slot>
     </div>
     <slot name="suffix">
-      <div v-if="suffix" :style="suffixStyle" class="x-cell__suffix" @click="$emit('clickSuffix', $event)">
+      <div v-if="suffix" :style="suffixStyle" class="x-cell__suffix">
         <x-icon name="i-arrow-right" color="info" />
       </div>
     </slot>

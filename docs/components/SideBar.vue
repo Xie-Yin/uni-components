@@ -30,7 +30,6 @@ export default {
     border-radius: 8px;
     color: var(--color-g8);
     font-size: 16px;
-    transition: all 300ms;
 
     & + & {
       margin-top: 10px;
@@ -39,7 +38,6 @@ export default {
     &.router-link-exact-active {
       color: mix(red, #fff, 60);
       background-color: var(--color-g1);
-      font-size: 18px;
       font-weight: bold;
     }
 
