@@ -1,4 +1,4 @@
-# `uniapp-components`
+# `uni-components`
 
 [文档地址](https://xie-yin.github.io/uni-components)
 
