@@ -26,6 +26,14 @@ export const mdRoutes = [
     component: () => import('../md/input.md'),
   },
   {
+    path: 'textarea',
+    name: 'textarea',
+    meta: {
+      title: 'textarea 多行输入框',
+    },
+    component: () => import('../md/textarea.md'),
+  },
+  {
     path: 'picker',
     name: 'picker',
     meta: {
@@ -61,6 +69,11 @@ export const demoRoutes = [
     path: 'input',
     name: 'demo-input',
     component: () => import('../demos/input.vue'),
+  },
+  {
+    path: 'textarea',
+    name: 'demo-textarea',
+    component: () => import('../demos/textarea.vue'),
   },
   {
     path: 'picker',

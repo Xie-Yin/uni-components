@@ -5,8 +5,6 @@
       placeholder-class="x-textarea-placeholder"
       :value="value"
       :placeholder="placeholder"
-      :type="type"
-      :password="password"
       :disabled="disabled"
       :maxlength="maxlength"
       :auto-focus="autoFocus"
@@ -21,7 +19,7 @@
       @blur="onBlur"
       @keyboardheightchange="onKeyboardheightchange"
     />
-    <div class="x-textarea__count" @click="onClickPrefix">
+    <div class="x-textarea__count">
       {{ countText }}
     </div>
   </div>
@@ -40,10 +38,6 @@ export default {
       type: String,
       default: '',
     },
-    type: {
-      type: String,
-      default: 'text',
-    },
     maxlength: {
       type: Number,
       default: 100,
@@ -53,7 +47,6 @@ export default {
       default: 'done',
     },
     trim: Boolean,
-    password: Boolean,
     disabled: Boolean,
     focus: Boolean,
     autoFocus: Boolean,
@@ -69,7 +62,12 @@ export default {
   },
   methods: {
     onInput(e) {
-      let { value } = e.detail
+      let value = ''
+      if (this.isWeb) {
+        value = e.target.value
+      } else {
+        value = e.detail.value
+      }
       if (this.trim) {
         value = String(value).trim()
       }
@@ -92,16 +90,6 @@ export default {
     },
     onKeyboardheightchange(e) {
       this.$emit('keyboardheightchange', e)
-    },
-    onClickSuffix(e) {
-      if (!this.disabled) {
-        this.$emit('clickSuffix', e)
-      }
-    },
-    onClickPrefix(e) {
-      if (!this.disabled) {
-        this.$emit('clickPrefix', e)
-      }
     },
   },
 }
@@ -134,6 +122,9 @@ export default {
     box-sizing: border-box;
     flex-grow: 1;
     height: 200rpx;
+    outline: none;
+    border: none;
+    background: unset;
   }
 
   &__count {
