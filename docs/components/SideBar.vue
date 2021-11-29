@@ -28,7 +28,7 @@ export default {
     line-height: 22px;
     padding: 6px 10px;
     border-radius: 8px;
-    color: var(--color-g8);
+    color: var(--x-color-g8);
     font-size: 16px;
 
     & + & {
@@ -37,12 +37,12 @@ export default {
 
     &.router-link-exact-active {
       color: mix(red, #fff, 60);
-      background-color: var(--color-g1);
+      background-color: var(--x-color-g1);
       font-weight: bold;
     }
 
     &:hover {
-      background-color: var(--color-g1);
+      background-color: var(--x-color-g1);
     }
   }
 }

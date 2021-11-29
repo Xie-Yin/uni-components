@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 .header {
-  border-bottom: 1px solid var(--color-g1);
+  border-bottom: 1px solid var(--x-color-g1);
 
   &__content {
     height: 60px;
@@ -23,14 +23,14 @@
     .logo {
       font-size: 16px;
       font-weight: bold;
-      color: var(--color-g8);
+      color: var(--x-color-g8);
     }
 
     .nav {
       a {
         font-size: 14px;
         font-weight: bold;
-        color: var(--color-g8);
+        color: var(--x-color-g8);
       }
     }
   }

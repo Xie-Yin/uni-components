@@ -166,7 +166,7 @@ export default {
     margin-bottom: 32rpx;
 
     &-text {
-      color: var(--color-g9);
+      color: var(--x-color-g9);
       font-size: 32rpx;
       line-height: 44rpx;
       padding-right: 20rpx;
@@ -180,20 +180,20 @@ export default {
         height: 100%;
         width: 16rpx;
         font-size: 28rpx;
-        color: var(--color-main);
+        color: var(--x-color-main);
       }
     }
   }
 
   &__content {
-    color: var(--color-g9);
+    color: var(--x-color-g9);
   }
 
   &__tips {
     font-size: 22rpx;
     line-height: 30rpx;
     padding-top: 16rpx;
-    color: var(--color-g4);
+    color: var(--x-color-g4);
   }
 
   @keyframes fade {
@@ -212,7 +212,7 @@ export default {
     font-size: 22rpx;
     line-height: 30rpx;
     padding-top: 16rpx;
-    color: var(--color-main);
+    color: var(--x-color-main);
     position: absolute;
     width: 100%;
     bottom: 18rpx;

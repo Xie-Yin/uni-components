@@ -85,17 +85,17 @@ export default {
     height: 88rpx;
     display: flex;
     align-items: center;
-    color: var(--color-g6);
+    color: var(--x-color-g6);
     font-size: 28rpx;
     border-radius: 16rpx;
-    background-color: var(--color-g1);
+    background-color: var(--x-color-g1);
     margin-bottom: 32rpx;
     position: relative;
     float: left;
 
     &.is-selected {
-      color: var(--color-g9);
-      border: 1px solid var(--color-main);
+      color: var(--x-color-g9);
+      border: 1px solid var(--x-color-main);
       background-color: #fff;
     }
 
@@ -105,7 +105,7 @@ export default {
       bottom: -1px;
       height: 32rpx;
       width: 32rpx;
-      background-color: var(--color-main);
+      background-color: var(--x-color-main);
       border-radius: 16rpx 0 16rpx 0;
       color: #fff;
       font-size: 26rpx;

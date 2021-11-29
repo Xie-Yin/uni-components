@@ -97,7 +97,7 @@ export default {
 
 <style lang="scss">
 .x-textarea-placeholder {
-  color: var(--color-g4);
+  color: var(--x-color-g4);
 }
 </style>
 
@@ -105,7 +105,7 @@ export default {
 .x-textarea {
   display: flex;
   box-sizing: border-box;
-  background-color: var(--color-g1);
+  background-color: var(--x-color-g1);
   border-radius: 16rpx;
   padding: 24rpx 24rpx 68rpx;
   align-items: center;
@@ -118,7 +118,7 @@ export default {
   &__inner {
     font-size: 28rpx;
     line-height: 40rpx;
-    color: var(--color-9);
+    color: var(--x-color-9);
     box-sizing: border-box;
     flex-grow: 1;
     height: 200rpx;
@@ -131,7 +131,7 @@ export default {
     position: absolute;
     right: 24rpx;
     bottom: 24rpx;
-    color: var(--color-g4);
+    color: var(--x-color-g4);
     font-size: 24rpx;
   }
 }

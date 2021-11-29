@@ -973,9 +973,9 @@
     $border-color-split: #efefef;
 
     thead {
-      background-color: var(--color-g1);
-      border-bottom: 1px solid var(--color-g2);
-      color: var(--color-g6);
+      background-color: var(--x-color-g1);
+      border-bottom: 1px solid var(--x-color-g2);
+      color: var(--x-color-g6);
       width: 100%;
     }
 
@@ -1014,7 +1014,7 @@
     td {
       &:first-child {
         width: 18%;
-        color: var(--color-g8);
+        color: var(--x-color-g8);
         font-weight: 600;
         white-space: nowrap;
       }

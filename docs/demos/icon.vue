@@ -30,7 +30,7 @@ export default {
 
   &__item {
     padding: 20px 0;
-    border: 1px solid var(--color-g1);
+    border: 1px solid var(--x-color-g1);
     font-size: 40px;
     display: flex;
     align-items: center;

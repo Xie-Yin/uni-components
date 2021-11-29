@@ -1,20 +1,20 @@
 :root,
 page {
-  --color-main: #ff443d;
-  --cl-sub: #4cd964;
-  --color-g1: #f6f7f9;
-  --color-g2: #eceef2;
-  --color-g3: #dbdfe6;
-  --color-g4: #c7ccd5;
-  --color-g5: #8a919f;
-  --color-g6: #6c727d;
-  --color-g7: #4d525c;
-  --color-g8: #393c42;
-  --color-text-support: #8a919f;
-  --color-success: #19be6b;
-  --color-error: #fa3534;
-  --color-warning: #ff9900;
-  --color-info: #909399;
+  --x-color-main: #ff443d;
+  --x-color-sub: #4cd964;
+  --x-color-g1: #f6f7f9;
+  --x-color-g2: #eceef2;
+  --x-color-g3: #dbdfe6;
+  --x-color-g4: #c7ccd5;
+  --x-color-g5: #8a919f;
+  --x-color-g6: #6c727d;
+  --x-color-g7: #4d525c;
+  --x-color-g8: #393c42;
+  --x-color-text-support: #8a919f;
+  --x-color-success: #19be6b;
+  --x-color-error: #fa3534;
+  --x-color-warning: #ff9900;
+  --x-color-info: #909399;
 }
 
 .x-s-text-overflow {
@@ -47,8 +47,8 @@ page {
   line-height: 88rpx;
 
   &.__primary {
-    border: 1rpx solid var(--color-main);
-    background: var(--color-main);
+    border: 1rpx solid var(--x-color-main);
+    background: var(--x-color-main);
     color: #fff;
 
     &.disabled {

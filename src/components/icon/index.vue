@@ -74,19 +74,19 @@ export default {
     position: relative;
 
     &.--primary {
-      color: var(--color-main);
+      color: var(--x-color-main);
     }
     &.--success {
-      color: var(--color-success);
+      color: var(--x-color-success);
     }
     &.--error {
-      color: var(--color-error);
+      color: var(--x-color-error);
     }
     &.--warning {
-      color: var(--color-warning);
+      color: var(--x-color-warning);
     }
     &.--info {
-      color: var(--color-info);
+      color: var(--x-color-info);
     }
   }
 }

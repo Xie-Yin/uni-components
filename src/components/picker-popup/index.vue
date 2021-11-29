@@ -135,11 +135,11 @@ export default {
     font-weight: 500;
     font-size: 36rpx;
     line-height: 50rpx;
-    color: var(--color-g9);
+    color: var(--x-color-g9);
 
     &-tips {
       margin-left: 20rpx;
-      color: var(--color-g4);
+      color: var(--x-color-g4);
       font-size: 28rpx;
       line-height: 40rpx;
     }
@@ -161,14 +161,14 @@ export default {
       align-items: center;
       justify-content: center;
       padding: 0 20rpx;
-      color: var(--color-g6);
-      background-color: var(--color-g1);
+      color: var(--x-color-g6);
+      background-color: var(--x-color-g1);
       border-radius: 16rpx;
       margin-bottom: 32rpx;
       box-sizing: border-box;
 
       &.is-selected {
-        color: var(--color-main);
+        color: var(--x-color-main);
         background-color: #f5f5f5;
       }
 

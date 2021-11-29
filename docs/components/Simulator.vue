@@ -29,7 +29,7 @@ export default {
   height: 568px;
   position: fixed;
   top: 70px;
-  background-color: var(--color-g1);
+  background-color: var(--x-color-g1);
   padding: 30px 8px 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;

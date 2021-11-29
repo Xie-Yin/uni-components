@@ -152,7 +152,7 @@ export default {
 
 <style lang="scss">
 .x-input-placeholder {
-  color: var(--color-g4);
+  color: var(--x-color-g4);
   font-weight: 400;
 }
 </style>
@@ -161,7 +161,7 @@ export default {
 .x-input {
   display: flex;
   box-sizing: border-box;
-  background-color: var(--color-g1);
+  background-color: var(--x-color-g1);
   border-radius: 16rpx;
   height: 88rpx;
   padding: 0 24rpx;
@@ -172,7 +172,7 @@ export default {
   }
 
   &__prefix {
-    color: var(--color-g9);
+    color: var(--x-color-g9);
     font-size: 28rpx;
     line-height: 40rpx;
     margin-right: 16rpx;
@@ -180,7 +180,7 @@ export default {
   }
 
   &__suffix {
-    color: var(--color-g9);
+    color: var(--x-color-g9);
     font-weight: 400;
     font-size: 28rpx;
     line-height: 40rpx;
@@ -192,7 +192,7 @@ export default {
       content: "";
       width: 1px;
       height: 28rpx;
-      background-color: var(--color-g3);
+      background-color: var(--x-color-g3);
       position: absolute;
       top: 6rpx;
       left: 0;
@@ -202,7 +202,7 @@ export default {
   &__inner {
     font-size: 28rpx;
     line-height: 40rpx;
-    color: var(--color-9);
+    color: var(--x-color-9);
     box-sizing: border-box;
     flex-grow: 1;
     border: none;
@@ -210,7 +210,7 @@ export default {
     background-color: unset;
 
     &::placeholder {
-      color: var(--color-g4);
+      color: var(--x-color-g4);
       font-weight: 400;
     }
   }

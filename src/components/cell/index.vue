@@ -63,7 +63,7 @@ export default {
 .x-cell {
   display: flex;
   box-sizing: border-box;
-  background-color: var(--color-g1);
+  background-color: var(--x-color-g1);
   border-radius: 16rpx;
   height: 88rpx;
   padding: 0 24rpx;
@@ -74,7 +74,7 @@ export default {
   }
 
   &__prefix {
-    color: var(--color-g9);
+    color: var(--x-color-g9);
     font-size: 28rpx;
     line-height: 40rpx;
     padding-right: 16rpx;
@@ -85,7 +85,7 @@ export default {
       content: '';
       width: 1px;
       height: 28rpx;
-      background-color: var(--color-g3);
+      background-color: var(--x-color-g3);
       position: absolute;
       top: 6rpx;
       right: 0;
@@ -93,7 +93,7 @@ export default {
   }
 
   &__suffix {
-    color: var(--color-g8);
+    color: var(--x-color-g8);
     font-size: 28rpx;
     font-weight: 400;
     line-height: 40rpx;
@@ -112,7 +112,7 @@ export default {
     font-size: 28rpx;
     font-weight: 400;
     line-height: 40rpx;
-    color: var(--color-9);
+    color: var(--x-color-9);
     box-sizing: border-box;
     flex-grow: 1;
     display: flex;
@@ -121,15 +121,15 @@ export default {
     &-overflow {
       line-height: 42rpx;
       border-radius: 21rpx;
-      background-color: var(--color-g2);
-      color: var(--color-g5);
+      background-color: var(--x-color-g2);
+      color: var(--x-color-g5);
       padding: 0 16rpx;
       margin-left: 20rpx;
       font-size: 24rpx;
     }
 
     &-placeholder {
-      color: var(--color-g4);
+      color: var(--x-color-g4);
       font-weight: 400;
     }
 
