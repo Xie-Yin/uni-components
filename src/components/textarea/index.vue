@@ -13,6 +13,8 @@
       :confirm-hold="confirmHold"
       :adjust-position="adjustPosition"
       :hold-keyboard="holdKeyboard"
+      :show-count="false"
+      :enableNative="false"
       @input="onInput"
       @confirm="onConfirm"
       @focus="onFocus"
